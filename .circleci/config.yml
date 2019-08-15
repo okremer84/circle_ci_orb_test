@@ -18,7 +18,6 @@ jobs:
       - slack/status:
           include_job_number_field: false
           include_visit_job_action: false
-          footer: source $BASH_ENV
 
 
 orbs:
