@@ -10,7 +10,7 @@ jobs:
     steps:
       - run:
           name: Install tools
-          command: apk add bash
+          command: apk add bash curl
       - checkout
       - run:
           name: Do something
