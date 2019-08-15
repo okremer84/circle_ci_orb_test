@@ -14,9 +14,11 @@ jobs:
       - checkout
       - run:
           name: Do something
-          command: echo "something"
-      - slack/notify:
-          message: "Testing"
+          command: RELEASE="$(date +%Y%m%d)RC$(git rev-parse --short --verify HEAD)"
+      - slack/status:
+          include_job_number_field: false
+          include_visit_job_action: false
+          footer: "To deploy copy paste this command: ./deploy REL " ${RELEASE}
 
 
 orbs:
