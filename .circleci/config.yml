@@ -9,6 +9,10 @@ jobs:
       - image: alpine:3.10
 
     steps:
+      - run:
+          name: Get bash
+          command: apk add bash
+
       - checkout
 
       - run:
