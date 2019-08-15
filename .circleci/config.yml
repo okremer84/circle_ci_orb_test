@@ -18,4 +18,6 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
-      -slack/notify
+      -slack/notify:
+          message: "Testing"
+
