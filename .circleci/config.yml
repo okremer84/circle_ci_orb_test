@@ -8,6 +8,8 @@ jobs:
     environment:
       BASH: 1
     steps:
+      - slack/message:
+          success_message: "Build started"
       - run:
           name: Install tools
           command: apk add bash curl git
