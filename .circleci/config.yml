@@ -15,8 +15,11 @@ jobs:
       - run:
           name: Do something
           command: 'export RELEASE="$(date +%Y%m%d)RC$(git rev-parse --short --verify HEAD)"'
+      - run:
+          name: Check release
+          command: echo $RELEASE
       - slack/status:
-          success_message: $RELEASE
+          success_message: "Hello!"
           include_job_number_field: false
           include_visit_job_action: false
 
