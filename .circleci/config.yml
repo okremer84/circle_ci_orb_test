@@ -18,7 +18,7 @@ jobs:
       - slack/status:
           include_job_number_field: false
           include_visit_job_action: false
-          footer: "To deploy copy paste this command: ./deploy REL " ${RELEASE}
+          footer: "To deploy copy paste this command: ./deploy REL " RELEASE
 
 
 orbs:
