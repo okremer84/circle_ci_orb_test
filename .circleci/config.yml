@@ -8,7 +8,7 @@ jobs:
     environment:
       BASH: 1
     steps:
-      - slack/message:
+      - slack/notify:
           success_message: "Build started"
       - run:
           name: Install tools
