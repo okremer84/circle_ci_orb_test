@@ -14,7 +14,7 @@ jobs:
       - checkout
       - run:
           name: Do something
-          command: echo 'export RELEASE="$(date +%Y%m%d)RC$(git rev-parse --short --verify HEAD)' >> $BASH_ENV
+          command: echo 'export RELEASE="$(date +%Y%m%d)RC$(git rev-parse --short --verify HEAD)"' >> $BASH_ENV
       - slack/status:
           include_job_number_field: false
           include_visit_job_action: false
