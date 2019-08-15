@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  slack: circleci/slack@x.y.z
+  slack: circleci/slack@3.3.0
 
 jobs:
   build:
