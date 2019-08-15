@@ -14,7 +14,7 @@ jobs:
       - checkout
       - run:
           name: Do something
-          command: 'export RELEASE="$(date +%Y%m%d)RC$(git rev-parse --short --verify HEAD)"'
+          command: echo 'export RELEASE="$(date +%Y%m%d)RC$(git rev-parse --short --verify HEAD)"' >> $BASH_ENV
       - run:
           name: Check release
           command: "echo $RELEASE"
