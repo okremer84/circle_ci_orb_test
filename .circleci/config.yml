@@ -1,26 +1,21 @@
 version: 2.1
 
-orbs:
-  slack: circleci/slack@3.3.0
 
 jobs:
   build:
     docker:
       - image: alpine:3.10
-
     steps:
       - run:
-          name: Get bash
-          command: apk add bash
-
+          name: Install tools
+          command: apk add bash nodejs npm git openssh
       - checkout
-
       - run:
-          name: Greeting
-          command: apk update && apk add bash
-      - run:
-          name: Print the Current Time
-          command: date
+          name: Do something
+          command: echo "something"
       - slack/notify:
           message: "Testing"
 
+
+orbs:
+  slack: circleci/slack@3.3.0
