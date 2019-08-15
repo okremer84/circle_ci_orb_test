@@ -1,4 +1,8 @@
-version: 2
+version: 2.1
+
+orbs:
+  slack: circleci/slack@betterhelp
+
 jobs:
   build:
     docker:
@@ -14,3 +18,4 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+      -slack/notify
