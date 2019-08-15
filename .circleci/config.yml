@@ -5,10 +5,9 @@ jobs:
   build:
     docker:
       - image: alpine:3.10
+    environment:
+      BASH: 1
     steps:
-      - run:
-          name: Install tools
-          command: EXPORT BASH=1
       - run:
           name: Install tools
           command: apk add bash
