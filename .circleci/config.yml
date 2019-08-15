@@ -13,8 +13,7 @@ jobs:
 
       - run:
           name: Greeting
-          command: RUN apk update && apk add bash
-
+          command: apk update && apk add bash
       - run:
           name: Print the Current Time
           command: date
