@@ -9,7 +9,7 @@ jobs:
       BASH: 1
     steps:
       - slack/notify:
-          success_message: "Build started"
+          message: "Build started"
       - run:
           name: Install tools
           command: apk add bash curl git
