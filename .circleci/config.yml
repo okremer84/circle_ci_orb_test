@@ -8,7 +8,10 @@ jobs:
     steps:
       - run:
           name: Install tools
-          command: apk add bash nodejs npm git openssh
+          command: EXPORT BASH=1
+      - run:
+          name: Install tools
+          command: apk add bash
       - checkout
       - run:
           name: Do something
