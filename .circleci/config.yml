@@ -12,13 +12,13 @@ jobs:
           name: Install tools
           command: apk add bash curl git
       - slack/notify:
-          message: "Started building PR# $CIRCLE_PR_NUMBER started by $CIRCLE_USERNAME"
+          message: "Started building PR: $CIRCLE_PULL_REQUEST started by $CIRCLE_USERNAME"
       - checkout
       - run:
           name: Do something
           command: echo 'export RELEASE="$(date +%Y%m%d)RC$(git rev-parse --short --verify HEAD)"' >> $BASH_ENV
       - slack/status:
-          success_message: ":tada: Build successfull!\n to deploy copy paste the following:\n './deploy REL $RELEASE'"
+          success_message: ":tada: Build successfull!\n to deploy copy paste the following:\n `./deploy REL $RELEASE`"
 
 orbs:
   slack: circleci/slack@3.3.0
