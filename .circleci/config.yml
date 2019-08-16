@@ -12,7 +12,7 @@ jobs:
           name: Install tools
           command: apk add bash curl git
       - slack/notify:
-          message: "Build started"
+          message: "Started building CIRCLE_BRANCH started by CIRCLE_USERNAME"
       - checkout
       - run:
           name: Do something
